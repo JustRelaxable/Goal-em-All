@@ -10,7 +10,14 @@ public class MainCharacterAnimatorController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         mainCharacterInputController = GetComponent<MainCharacterInputController>();
+        mainCharacterInputController.OnTouchEnd += MainCharacterInputController_OnTouchEnd;
     }
+
+    private void MainCharacterInputController_OnTouchEnd(Vector3 obj)
+    {
+        animator.SetTrigger("RunToStop");
+    }
+
     private void Update()
     {
         animator.SetFloat("RunningBlend", mainCharacterInputController.joystickVector.magnitude);

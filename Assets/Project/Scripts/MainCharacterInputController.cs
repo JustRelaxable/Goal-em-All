@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class MainCharacterInputController : MonoBehaviour
     Vector3 presentTouchPosition;
     public Vector3 joystickVector;
     public bool touching = false;
+
+    public event Action<Vector3> OnTouchEnd;
 
     private void Update()
     {
@@ -25,6 +28,7 @@ public class MainCharacterInputController : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            OnTouchEnd?.Invoke(joystickVector);
             joystickVector = Vector3.zero;
             touching = false;
         }
