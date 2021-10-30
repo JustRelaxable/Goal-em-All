@@ -24,7 +24,7 @@ public class MainCharacterInputController : MonoBehaviour
             presentTouchPosition = Input.mousePosition;
             Vector3 differenceVector = presentTouchPosition - firstTouchPosition;
             Vector3 screenIndependentDifferenceVector = new Vector3(differenceVector.x / Screen.width, differenceVector.y / Screen.height);
-            joystickVector = Vector3.ClampMagnitude(screenIndependentDifferenceVector, 1f);
+            joystickVector = Vector3.ClampMagnitude(screenIndependentDifferenceVector, 0.1f);
         }
         else if (Input.GetMouseButtonUp(0))
         {

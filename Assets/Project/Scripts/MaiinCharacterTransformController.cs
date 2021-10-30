@@ -8,6 +8,8 @@ public class MaiinCharacterTransformController : MonoBehaviour
     Camera camera;
 
     private MainCharacterInputController mainCharacterInputController;
+    public Vector3 characterRotationVector;
+    public float characterRotationSensitivity = 5f;
 
     private void Awake()
     {
@@ -23,8 +25,8 @@ public class MaiinCharacterTransformController : MonoBehaviour
         Vector3 cameraRight = camera.transform.right;
         Vector3 cameraRightHorizontal = new Vector3(cameraRight.x, 0, cameraRight.z);
 
-        Vector3 characterRotationVector = mainCharacterInputController.joystickVector.y * cameraForwardHorizontal + mainCharacterInputController.joystickVector.x * cameraRightHorizontal;
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(characterRotationVector), Time.deltaTime * 5);
+        characterRotationVector = mainCharacterInputController.joystickVector.y * cameraForwardHorizontal + mainCharacterInputController.joystickVector.x * cameraRightHorizontal;
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(characterRotationVector), Time.deltaTime * characterRotationSensitivity);
 
     }
 }

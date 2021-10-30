@@ -20,6 +20,6 @@ public class MainCharacterAnimatorController : MonoBehaviour
 
     private void Update()
     {
-        animator.SetFloat("RunningBlend", mainCharacterInputController.joystickVector.magnitude);
+        animator.SetFloat("RunningBlend", mainCharacterInputController.joystickVector.magnitude*5);
     }
 }
