@@ -18,11 +18,18 @@ public class BallAnimatorController : MonoBehaviour
     private Animator animator;
     private void Awake()
     {
+        mainCharacterInputController = FindObjectOfType<MainCharacterInputController>();
         mainCharacterInputController.OnTouchStart += MainCharacterInputController_OnTouchStart;
         mainCharacterInputController.OnTouchEnd += MainCharacterInputController_OnTouchEnd;
         animator = GetComponent<Animator>();
         ballRigidbody = GetComponent<Rigidbody>();
         sphereCollider = GetComponent<SphereCollider>();
+    }
+
+    public void SetReferences(MainCharacterInputController inputController,Transform forcePosition)
+    {
+        mainCharacterInputController = inputController;
+        ballForcePosition = forcePosition;
     }
 
     private void MainCharacterInputController_OnTouchEnd(Vector3 obj)

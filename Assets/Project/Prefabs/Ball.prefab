@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3855535349371795026}
   - component: {fileID: 1167310118504316888}
   - component: {fileID: 5325150131096972024}
+  - component: {fileID: 3932240566007799538}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -92,8 +93,8 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217369713177048770}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Material: {fileID: 13400000, guid: d3b5f6ccb8bc0434ca35d250cef99252, type: 2}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.15507944
@@ -130,3 +131,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCharacterInputController: {fileID: 0}
+  ballForcePosition: {fileID: 0}
+  kickPower: 750
+--- !u!54 &3932240566007799538
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217369713177048770}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
