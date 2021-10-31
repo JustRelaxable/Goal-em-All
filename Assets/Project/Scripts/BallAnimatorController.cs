@@ -45,7 +45,6 @@ public class BallAnimatorController : MonoBehaviour
         ballRigidbody.isKinematic = false;
         sphereCollider.isTrigger = false;
         ballRigidbody.MovePosition(ballForcePosition.position);
-
         ballRigidbody.AddForce(ballForcePosition.transform.forward * kickPower);
         //ballRigidbody.angularVelocity = Vector3.zero;
     }
