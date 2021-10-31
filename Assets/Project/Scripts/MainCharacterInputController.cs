@@ -11,12 +11,14 @@ public class MainCharacterInputController : MonoBehaviour
     public bool touching = false;
 
     public event Action<Vector3> OnTouchEnd;
+    public event Action<Vector3> OnTouchStart;
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             firstTouchPosition = Input.mousePosition;
+            OnTouchStart?.Invoke(firstTouchPosition);
             touching = true;
         }
         else if (Input.GetMouseButton(0))
