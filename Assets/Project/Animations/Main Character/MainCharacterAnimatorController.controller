@@ -29,7 +29,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Run to Stop
+  m_Name: Kick
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -44,7 +44,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 091a2dee9c334e24480a97943239e7b3, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 45767c5a4cc1aa140922a4a2aebdf1bf, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
