@@ -50,6 +50,7 @@ public class BallAnimatorController : MonoBehaviour
         transform.SetParent(null, true);
        
         ballRigidbody.isKinematic = false;
+        ballRigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
         sphereCollider.isTrigger = false;
         ballRigidbody.MovePosition(ballForcePosition.position);
         ballRigidbody.AddForce(ballForcePosition.transform.forward * kickPower);
