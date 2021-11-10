@@ -13,6 +13,7 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
     private CapsuleCollider enemyCapsuleCollider;
 
     public event Action OnCollidedWithBall;
+    public event Action OnPlayerTriggered;
 
     private void Awake()
     {
@@ -32,5 +33,13 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
 
         enemyRigidbody.AddForce(Vector3.up *100000);
         //enemyCapsuleCollider.enabled = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            OnPlayerTriggered?.Invoke();
+        }
     }
 }
