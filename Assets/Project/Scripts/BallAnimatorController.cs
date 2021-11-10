@@ -20,12 +20,14 @@ public class BallAnimatorController : MonoBehaviour
     private Animator animator;
     private void Awake()
     {
-        mainCharacterInputController = FindObjectOfType<MainCharacterInputController>();
-        mainCharacterInputController.OnTouchStart += MainCharacterInputController_OnTouchStart;
-        mainCharacterInputController.OnTouchEnd += MainCharacterInputController_OnTouchEnd;
         animator = GetComponent<Animator>();
         ballRigidbody = GetComponent<Rigidbody>();
         sphereCollider = GetComponent<SphereCollider>();
+        mainCharacterInputController = FindObjectOfType<MainCharacterInputController>();
+        mainCharacterInputController.OnTouchStart += MainCharacterInputController_OnTouchStart;
+        if (mainCharacterInputController.touching)
+            MainCharacterInputController_OnTouchStart(Vector3.zero);
+        mainCharacterInputController.OnTouchEnd += MainCharacterInputController_OnTouchEnd; 
     }
 
     public void SetReferences(MainCharacterInputController inputController,Transform forcePosition)
