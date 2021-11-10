@@ -1685,6 +1685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ragdollRoot: {fileID: 6293365801721095876}
+  pushBackForce: 800
 --- !u!114 &6364578337456765080
 MonoBehaviour:
   m_ObjectHideFlags: 0

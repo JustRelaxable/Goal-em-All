@@ -15,6 +15,8 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
     public event Action OnCollidedWithBall;
     public event Action OnPlayerTriggered;
 
+    public float pushBackForce = 1;
+
     private void Awake()
     {
         enemyAnimator = GetComponent<Animator>();
@@ -31,7 +33,7 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
         //enemyRigidbody.isKinematic = true;
         //enemyRigidbody.useGravity = false;
 
-        enemyRigidbody.AddForce(Vector3.up *100000);
+        enemyRigidbody.AddForce(-collision.impulse * pushBackForce);
         //enemyCapsuleCollider.enabled = false;
     }
 
