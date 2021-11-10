@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IShootable
 {
-    public void OnBallCollide(Collision collision);
+    public void OnBallCollide(Collision collision,GameObject ball);
 }

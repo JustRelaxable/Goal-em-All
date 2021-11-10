@@ -22,7 +22,7 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
         enemyCapsuleCollider = GetComponent<CapsuleCollider>();
     }
 
-    public void OnBallCollide(Collision collision)
+    public void OnBallCollide(Collision collision,GameObject ball)
     {
         OnCollidedWithBall?.Invoke();
 

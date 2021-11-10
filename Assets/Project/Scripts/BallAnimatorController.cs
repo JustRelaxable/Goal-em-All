@@ -16,6 +16,8 @@ public class BallAnimatorController : MonoBehaviour
     private Rigidbody ballRigidbody;
     private SphereCollider sphereCollider;
 
+    public event Action OnBallKicked;
+
 
     private Animator animator;
     private void Awake()
@@ -48,7 +50,7 @@ public class BallAnimatorController : MonoBehaviour
 
     public void OnKickAnimationEnd()
     {
-
+        OnBallKicked?.Invoke();
         animator.enabled = false;
         animator.applyRootMotion = true;
         //transform.parent = null;
