@@ -1953,6 +1953,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5800121806983472608, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5942394498313473408, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
       propertyPath: m_Name
       value: Box
@@ -4511,6 +4515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5800121806983472608, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5942394498313473408, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
       propertyPath: m_Name
       value: Box (3)
@@ -8153,6 +8161,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5800121806983472608, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5942394498313473408, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
       propertyPath: m_Name
       value: Box (1)
@@ -10011,6 +10023,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5800121806983472608, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5942394498313473408, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
       propertyPath: m_Name
       value: Box (2)
@@ -10509,6 +10525,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 275362012}
     m_Modifications:
+    - target: {fileID: 5293801316233669717, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5942394498313473408, guid: 538e95724aab8f94082f3c28d2e50258, type: 3}
       propertyPath: m_Name
       value: Box (1)
