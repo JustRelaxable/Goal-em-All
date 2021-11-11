@@ -17,6 +17,8 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
 
     public float pushBackForce = 1;
 
+    private bool collidedWithBall = false;
+
     private void Awake()
     {
         enemyAnimator = GetComponent<Animator>();
@@ -26,6 +28,9 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
 
     public void OnBallCollide(Collision collision,GameObject ball)
     {
+        if (collidedWithBall)
+            return;
+        collidedWithBall = true;
         OnCollidedWithBall?.Invoke();
 
         ragdollRoot.SetActive(true);
