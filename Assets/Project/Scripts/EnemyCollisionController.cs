@@ -40,6 +40,8 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
 
         enemyRigidbody.AddForce(-collision.impulse * pushBackForce);
         //enemyCapsuleCollider.enabled = false;
+
+        Destroy(gameObject, 5);
     }
 
     private void OnTriggerEnter(Collider other)

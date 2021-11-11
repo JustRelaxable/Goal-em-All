@@ -62,5 +62,14 @@ public class BallAnimatorController : MonoBehaviour
         ballRigidbody.MovePosition(ballForcePosition.position);
         ballRigidbody.AddForce(ballForcePosition.transform.forward * kickPower);
         //ballRigidbody.angularVelocity = Vector3.zero;
+
+        UnsubscribeMainCharacterEvent();
+        Destroy(gameObject, 5);
+    }
+
+    private void UnsubscribeMainCharacterEvent()
+    {
+        mainCharacterInputController.OnTouchStart-=MainCharacterInputController_OnTouchStart;
+        mainCharacterInputController.OnTouchEnd -= MainCharacterInputController_OnTouchEnd;
     }
 }

@@ -10,6 +10,8 @@ public class DoorCollisionController : MonoBehaviour, IShootable
     [SerializeField]
     Transform explosionSpawnPoint;
 
+    [SerializeField]
+    MeshRenderer doorHandle;
 
     private DoorEnemyCounter doorEnemyCounter;
     private MeshRenderer meshRenderer;
@@ -27,6 +29,8 @@ public class DoorCollisionController : MonoBehaviour, IShootable
         if(doorEnemyCounter.EnemyCount == 0)
         {
             explosionParticle.SetActive(true);
+
+            doorHandle.enabled = false;
             meshRenderer.enabled = false;
             boxCollider.enabled = false;
             Destroy(gameObject, 5);
