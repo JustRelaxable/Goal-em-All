@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCharacterInputController: {fileID: 0}
   ballForcePosition: {fileID: 0}
-  kickPower: 750
+  kickPower: 1250
 --- !u!54 &3932240566007799538
 Rigidbody:
   m_ObjectHideFlags: 0
