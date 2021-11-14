@@ -26,7 +26,9 @@ public class MaiinCharacterTransformController : MonoBehaviour
         Vector3 cameraRightHorizontal = new Vector3(cameraRight.x, 0, cameraRight.z);
 
         characterRotationVector = mainCharacterInputController.joystickVector.y * cameraForwardHorizontal + mainCharacterInputController.joystickVector.x * cameraRightHorizontal;
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(characterRotationVector), Time.deltaTime * characterRotationSensitivity);
-
+        if (characterRotationVector != Vector3.zero)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(characterRotationVector), Time.deltaTime * characterRotationSensitivity);
+        }  
     }
 }

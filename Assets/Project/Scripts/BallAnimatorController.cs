@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class BallAnimatorController : MonoBehaviour
 {
     [SerializeField]
@@ -82,6 +82,8 @@ public class BallAnimatorController : MonoBehaviour
     private EnemyAngleData CheckIfEnemyIsInAngle()
     {
         var colliders = Physics.OverlapSphere(mainCharacterInputController.transform.position, 10f);
+        colliders = colliders.OrderBy(x => Vector3.Distance(mainCharacterInputController.transform.position, x.transform.position)).ToArray();
+
         for (int i = 0; i < colliders.Length; i++)
         {
             EnemyAIController enemyAIController;

@@ -10,6 +10,7 @@ public class EnemyAIController : MonoBehaviour
     GameObject playerGO;
     EnemyCollisionController enemyCollisionController;
 
+
     private delegate void UpdateDelegate();
     UpdateDelegate CurrentUpdateDelegate;
     
@@ -30,8 +31,10 @@ public class EnemyAIController : MonoBehaviour
 
     private void EnemyCollisionController_OnCollidedWithBall()
     {
-        navMeshAgent.enabled = false;
         CurrentUpdateDelegate -= FollowPlayer;
+        navMeshAgent.enabled = false;
+        navMeshAgent = null;
+        //navMeshAgent.Stop();
     }
 
     private void Update()
@@ -41,6 +44,6 @@ public class EnemyAIController : MonoBehaviour
 
     private void FollowPlayer()
     {
-        navMeshAgent.SetDestination(playerGO.transform.position);
+        navMeshAgent?.SetDestination(playerGO.transform.position);
     }
 }
