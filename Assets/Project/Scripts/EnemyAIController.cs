@@ -34,6 +34,7 @@ public class EnemyAIController : MonoBehaviour
         CurrentUpdateDelegate -= FollowPlayer;
         navMeshAgent.enabled = false;
         navMeshAgent = null;
+        Destroy(this);
         //navMeshAgent.Stop();
     }
 
