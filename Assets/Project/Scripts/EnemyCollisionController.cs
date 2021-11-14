@@ -11,6 +11,7 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
     private Animator enemyAnimator;
     private Rigidbody enemyRigidbody;
     private CapsuleCollider enemyCapsuleCollider;
+    private EnemyLayerController enemyLayerController;
 
     public event Action OnCollidedWithBall;
     public event Action OnPlayerTriggered;
@@ -24,6 +25,7 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
         enemyAnimator = GetComponent<Animator>();
         enemyRigidbody = GetComponent<Rigidbody>();
         enemyCapsuleCollider = GetComponent<CapsuleCollider>();
+        enemyLayerController = GetComponent<EnemyLayerController>();
     }
 
     public void OnBallCollide(Collision collision,GameObject ball)
@@ -40,7 +42,7 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
 
         enemyRigidbody.AddForce(-collision.impulse * pushBackForce);
         //enemyCapsuleCollider.enabled = false;
-
+        enemyLayerController.ChangeEnemyLayerToDead();
         Destroy(gameObject, 5);
     }
 

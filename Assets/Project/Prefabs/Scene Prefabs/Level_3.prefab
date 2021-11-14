@@ -1579,7 +1579,6 @@ GameObject:
   - component: {fileID: 3403131493797041776}
   - component: {fileID: 3403131493797041779}
   - component: {fileID: 3403131493797041778}
-  - component: {fileID: 3403131493797041777}
   m_Layer: 0
   m_Name: Fog
   m_TagString: Untagged
@@ -1595,7 +1594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3403131493797041791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.446, y: -8.4, z: 57.4621}
+  m_LocalPosition: {x: -27.446, y: -13.53, z: 57.4621}
   m_LocalScale: {x: 22.358887, y: 1, z: 16.868492}
   m_Children: []
   m_Father: {fileID: 3403131495188831196}
@@ -1650,20 +1649,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3403131493797041777
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3403131493797041791}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &3403131493813064591
 GameObject:
   m_ObjectHideFlags: 0
@@ -10774,14 +10759,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
---- !u!4 &3399079950693174186 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4977646799359860, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
-  m_PrefabInstance: {fileID: 3403131495168279774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3403844756761781964 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
+  m_PrefabInstance: {fileID: 3403131495168279774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3399079950693174186 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4977646799359860, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
   m_PrefabInstance: {fileID: 3403131495168279774}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3403131495178909581
