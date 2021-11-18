@@ -16,7 +16,7 @@ public class BoxCollisionController : MonoBehaviour, IShootable
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        boxCollider = GetComponent<BoxCollider>();
+        boxCollider = GetComponent<Collider>();
     }
 
 

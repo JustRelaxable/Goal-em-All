@@ -13,6 +13,21 @@ public class MainCharacterInputController : MonoBehaviour
     public event Action<Vector3> OnTouchEnd;
     public event Action<Vector3> OnTouchStart;
 
+    private void Awake()
+    {
+        FindObjectOfType<FinishlineCollisionController>().OnPlayerTouchedFinishLine += MainCharacterInputController_OnPlayerTouchedFinishLine;
+    }
+
+    private void MainCharacterInputController_OnPlayerTouchedFinishLine()
+    {
+        firstTouchPosition = Vector3.zero;
+        presentTouchPosition = Vector3.zero;
+        joystickVector = Vector3.zero;
+        OnTouchEnd?.Invoke(Vector3.zero);
+        touching = false;
+        this.enabled = false;
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
