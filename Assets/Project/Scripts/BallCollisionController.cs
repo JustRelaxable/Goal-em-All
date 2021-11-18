@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BallCollisionController : MonoBehaviour
 {
+    public float wallDoubleMinimumSpeed = 10f;
+    public int wallMaxSplitCount = 3;
+    public int ballCurrentSplit = 0;
+
     public WallCollisionSettings[] wallCollisionSettings;
     public int WallCollisionCount { get; set; } = 0;
     private void OnCollisionEnter(Collision collision)

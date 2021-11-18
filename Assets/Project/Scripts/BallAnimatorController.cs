@@ -75,7 +75,7 @@ public class BallAnimatorController : MonoBehaviour
 
         //ballRigidbody.angularVelocity = Vector3.zero;
 
-        UnsubscribeMainCharacterEvent();
+        //UnsubscribeMainCharacterEvent();
         Destroy(gameObject, 5);
     }
 
@@ -106,6 +106,11 @@ public class BallAnimatorController : MonoBehaviour
     {
         mainCharacterInputController.OnTouchStart-=MainCharacterInputController_OnTouchStart;
         mainCharacterInputController.OnTouchEnd -= MainCharacterInputController_OnTouchEnd;
+    }
+
+    private void OnDestroy()
+    {
+        UnsubscribeMainCharacterEvent();
     }
 }
 

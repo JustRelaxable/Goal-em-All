@@ -14,6 +14,14 @@ public class WallCollisionController : MonoBehaviour, IShootable
         StartCoroutine(CollisionCooldown());
         var ballCollisionController = ball.GetComponent<BallCollisionController>();
         var ballRigidbody = ball.GetComponent<Rigidbody>();
+        if(ballRigidbody.velocity.magnitude >= ballCollisionController.wallDoubleMinimumSpeed && ballCollisionController.wallMaxSplitCount>ballCollisionController.ballCurrentSplit)
+        {
+            ballCollisionController.ballCurrentSplit++;
+            var spawnedBall = Instantiate(ball);
+            Destroy(spawnedBall, 5);
+            spawnedBall.GetComponent<BallCollisionController>().ballCurrentSplit = ballCollisionController.ballCurrentSplit;
+            spawnedBall.GetComponent<Rigidbody>().velocity = ballRigidbody.velocity;
+        }
         ApplyWallForceAndChangeTrailColor(ballCollisionController,ballRigidbody);
     }
 
