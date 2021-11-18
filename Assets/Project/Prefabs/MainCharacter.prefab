@@ -31,6 +31,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9177014415827458317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4202881187046826442}
+  m_Layer: 7
+  m_Name: CameraFinishTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4202881187046826442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177014415827458317}
+  m_LocalRotation: {x: 0, y: 0.999988, z: -0.0049043368, w: 0}
+  m_LocalPosition: {x: 0, y: 1.19, z: 3.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8983621107203361380}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0.562, y: 180, z: 0}
 --- !u!1001 &7158903351057150150
 PrefabInstance:
   m_ObjectHideFlags: 0
