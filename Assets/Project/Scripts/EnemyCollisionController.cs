@@ -7,20 +7,20 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
 {
 
     [SerializeField]
-    private GameObject ragdollRoot;
-    private Animator enemyAnimator;
-    private Rigidbody enemyRigidbody;
-    private CapsuleCollider enemyCapsuleCollider;
-    private EnemyLayerController enemyLayerController;
+    protected GameObject ragdollRoot;
+    protected Animator enemyAnimator;
+    protected Rigidbody enemyRigidbody;
+    protected CapsuleCollider enemyCapsuleCollider;
+    protected EnemyLayerController enemyLayerController;
 
-    public event Action OnCollidedWithBall;
+    public event Action OnEnemyDead;
     public event Action OnPlayerTriggered;
 
     public float pushBackForce = 1;
 
-    private bool collidedWithBall = false;
+    protected bool collidedWithBall = false;
 
-    private void Awake()
+    protected void Awake()
     {
         enemyAnimator = GetComponent<Animator>();
         enemyRigidbody = GetComponent<Rigidbody>();
@@ -28,12 +28,12 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
         enemyLayerController = GetComponent<EnemyLayerController>();
     }
 
-    public void OnBallCollide(Collision collision,GameObject ball)
+    public virtual void OnBallCollide(Collision collision,GameObject ball)
     {
         if (collidedWithBall)
             return;
         collidedWithBall = true;
-        OnCollidedWithBall?.Invoke();
+        OnEnemyDead?.Invoke();
 
         ragdollRoot.SetActive(true);
         enemyAnimator.enabled = false;
@@ -52,5 +52,10 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
         {
             OnPlayerTriggered?.Invoke();
         }
+    }
+
+    protected void EnemyDead()
+    {
+        OnEnemyDead?.Invoke();
     }
 }

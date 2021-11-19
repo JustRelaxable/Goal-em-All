@@ -19,7 +19,7 @@ public class EnemyAIController : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         playerGO = FindObjectOfType<MainCharacterInputController>().gameObject;
         enemyCollisionController = GetComponent<EnemyCollisionController>();
-        enemyCollisionController.OnCollidedWithBall += EnemyCollisionController_OnCollidedWithBall;
+        enemyCollisionController.OnEnemyDead += EnemyCollisionController_OnCollidedWithBall;
         enemyCollisionController.OnPlayerTriggered += EnemyCollisionController_OnPlayerTriggered;
         //CurrentUpdateDelegate = FollowPlayer;
     }

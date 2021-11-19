@@ -31,7 +31,7 @@ public class DoorEnemyCounter : MonoBehaviour
         var enemies = FindObjectsOfType<EnemyCollisionController>();
         foreach (var enemy in enemies)
         {
-            enemy.OnCollidedWithBall += Enemy_OnCollidedWithBall;
+            enemy.OnEnemyDead += Enemy_OnCollidedWithBall;
         }
     }
 
