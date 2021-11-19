@@ -35,9 +35,10 @@ public class MainCharacterInputController : MonoBehaviour
             firstTouchPosition = Input.mousePosition;
             OnTouchStart?.Invoke(firstTouchPosition);
             touching = true;
+            StartCoroutine(AutomaticKicker());
         }
         else if (Input.GetMouseButton(0))
-        {
+        { 
             presentTouchPosition = Input.mousePosition;
             Vector3 differenceVector = presentTouchPosition - firstTouchPosition;
             Vector3 screenIndependentDifferenceVector = new Vector3(differenceVector.x / Screen.width, differenceVector.y / Screen.height);
@@ -45,9 +46,18 @@ public class MainCharacterInputController : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            OnTouchEnd?.Invoke(joystickVector);
+            StopCoroutine(AutomaticKicker());
+            //OnTouchEnd?.Invoke(joystickVector);
             joystickVector = Vector3.zero;
             touching = false;
         }
+    }
+
+    private IEnumerator AutomaticKicker()
+    {
+        OnTouchEnd?.Invoke(joystickVector);
+        yield return new WaitForSeconds(1f);
+        OnTouchStart?.Invoke(joystickVector);
+        StartCoroutine(AutomaticKicker());
     }
 }
