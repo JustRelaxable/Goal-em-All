@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    public Vector3 LevelVector { get; set; } = Vector3.zero;
     [SerializeField]
     GameObject gameObjectToFollow;
 
@@ -15,6 +16,6 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = gameObjectToFollow.transform.position + differenceVector;
+        transform.position = gameObjectToFollow.transform.position + differenceVector + LevelVector;
     }
 }
