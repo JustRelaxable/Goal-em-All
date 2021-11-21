@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1855336432250127343}
   - component: {fileID: 1044534972834157673}
   - component: {fileID: 1044534972834157672}
-  - component: {fileID: 3647016399510383279}
+  - component: {fileID: 3227258465357710647}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -145,7 +145,7 @@ CapsuleCollider:
   m_Height: 0.020184513
   m_Direction: 2
   m_Center: {x: 0.000000042915342, y: 0.00000007629396, z: 0.009235171}
---- !u!114 &3647016399510383279
+--- !u!114 &3227258465357710647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 198025168779715130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc5c6982ddfa80458daa652d19b68d3, type: 3}
+  m_Script: {fileID: 11500000, guid: b90b8113245039c46b8efe6029ae72a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}

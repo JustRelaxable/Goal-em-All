@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
   particleSpawnPoint: {fileID: 5800121806983472608}
+  moneyPrefab: {fileID: 8616164380334350481, guid: 5be6e5e797102824bb83ab209474d755, type: 3}
 --- !u!1 &6817449138374743217
 GameObject:
   m_ObjectHideFlags: 0
