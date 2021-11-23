@@ -18,7 +18,7 @@ public class EnemyLayerController : MonoBehaviour
         var layerID = (int)Mathf.Log(enemyDeadLayer.value, 2);
         SetLayerRecursively(gameObject, layerID);
         enemy_score += 1;
-        Debug.Log(enemy_score);
+        //Debug.Log(enemy_score);
     }
     void SetLayerRecursively(GameObject obj, int newLayer)
     {

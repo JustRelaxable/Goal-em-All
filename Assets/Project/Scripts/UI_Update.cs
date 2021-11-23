@@ -16,7 +16,7 @@ public class UI_Update : MonoBehaviour
     {
         gameOver = false;
         Money = 0;
-        InvokeRepeating("scoreUpdate", 1.0f, 0.5f);
+        
     }
 
     // Update is called once per frame
