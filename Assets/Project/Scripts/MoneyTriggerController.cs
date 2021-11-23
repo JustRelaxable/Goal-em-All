@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoneyTriggerController : MonoBehaviour
 {
+    public static int money;
     GameObject parentGO;
     private Animator animator;
     private SphereCollider sphereCollider;
     private Vector3 initialScale;
+
     private void Awake()
     {
         parentGO = transform.parent.gameObject;
@@ -15,6 +18,8 @@ public class MoneyTriggerController : MonoBehaviour
         sphereCollider = GetComponent<SphereCollider>();
         initialScale = transform.localScale;
     }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -23,6 +28,7 @@ public class MoneyTriggerController : MonoBehaviour
             //animator.applyRootMotion = true;
             animator.enabled = false;
             sphereCollider.enabled = false;
+            money+=1;
         }
     }
 

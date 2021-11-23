@@ -1744,8 +1744,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15.16
-  m_Center: {x: -0, y: 0, z: 0}
+  m_Radius: 9.413675
+  m_Center: {x: 0, y: -0.64580387, z: 0}
 --- !u!114 &6718489280588891385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2389,7 +2389,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cc95f57574e44da43827b34d6c737cae, type: 2}
+  - {fileID: 2100000, guid: 279cfdc6b0fcf58428fd837edb6b3b41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

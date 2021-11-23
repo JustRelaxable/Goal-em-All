@@ -23,7 +23,6 @@ public class BoxCollisionController : MonoBehaviour, IShootable
     }
 
 
-
     public void OnBallCollide(Collision collision, GameObject ball)
     {
         meshRenderer.enabled = false;

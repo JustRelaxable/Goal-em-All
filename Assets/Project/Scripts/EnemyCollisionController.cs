@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class EnemyCollisionController : MonoBehaviour, IShootable
 {
-
+   
+    
     [SerializeField]
     protected GameObject ragdollRoot;
     protected Animator enemyAnimator;
@@ -58,4 +59,5 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
     {
         OnEnemyDead?.Invoke();
     }
+
 }
