@@ -11,12 +11,15 @@ public class MoneyTriggerController : MonoBehaviour
     private SphereCollider sphereCollider;
     private Vector3 initialScale;
 
+    private MoneyAudioController moneyAudioController;
+
     private void Awake()
     {
         parentGO = transform.parent.gameObject;
         animator = GetComponent<Animator>();
         sphereCollider = GetComponent<SphereCollider>();
         initialScale = transform.localScale;
+        moneyAudioController = GetComponent<MoneyAudioController>();
     }
 
 
@@ -25,6 +28,7 @@ public class MoneyTriggerController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StartCoroutine(CoGoToPlayer());
+            moneyAudioController.PlayPickupSound();
             //animator.applyRootMotion = true;
             animator.enabled = false;
             sphereCollider.enabled = false;
