@@ -7,6 +7,9 @@ public class BallAudioController : MonoBehaviour
     [SerializeField]
     AudioClip[] kickSounds;
 
+    [SerializeField]
+    AudioClip wallHit;
+
     AudioSource audioSource;
 
     private void Awake()
@@ -18,7 +21,15 @@ public class BallAudioController : MonoBehaviour
     private void BallAudioController_OnBallKicked()
     {
         var randomIndex = Random.Range(0, kickSounds.Length);
+        audioSource.volume = 0.7f;
         audioSource.clip = kickSounds[randomIndex];
+        audioSource.Play();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        audioSource.clip = wallHit;
+        audioSource.volume = 0.1f;
         audioSource.Play();
     }
 }
