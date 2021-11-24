@@ -28,6 +28,16 @@ public class MainCharacterInputController : MonoBehaviour
         this.enabled = false;
     }
 
+    public void OnCollisionWithEnemy()
+    {
+        firstTouchPosition = Vector3.zero;
+        presentTouchPosition = Vector3.zero;
+        joystickVector = Vector3.zero;
+        OnTouchEnd?.Invoke(Vector3.zero);
+        touching = false;
+        this.enabled = false;
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

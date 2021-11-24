@@ -55,6 +55,15 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<MainCharacterInputController>().OnCollisionWithEnemy();
+        }
+        
+    }
+
     protected void EnemyDead()
     {
         OnEnemyDead?.Invoke();
