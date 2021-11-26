@@ -59,7 +59,7 @@ public class EnemyCollisionController : MonoBehaviour, IShootable
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<MainCharacterInputController>().OnCollisionWithEnemy();
+            collision.gameObject.GetComponent<MainCharacterInputController>().CollisionWithEnemy();
         }
         
     }

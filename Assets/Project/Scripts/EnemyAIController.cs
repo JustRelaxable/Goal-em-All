@@ -10,7 +10,6 @@ public class EnemyAIController : MonoBehaviour
     GameObject playerGO;
     EnemyCollisionController enemyCollisionController;
 
-
     private delegate void UpdateDelegate();
     UpdateDelegate CurrentUpdateDelegate;
     
@@ -22,6 +21,13 @@ public class EnemyAIController : MonoBehaviour
         enemyCollisionController.OnEnemyDead += EnemyCollisionController_OnCollidedWithBall;
         enemyCollisionController.OnPlayerTriggered += EnemyCollisionController_OnPlayerTriggered;
         //CurrentUpdateDelegate = FollowPlayer;
+        playerGO.GetComponent<MainCharacterInputController>().OnCollisionWithEnemy += EnemyAIController_OnCollisionWithEnemy;
+    }
+
+    private void EnemyAIController_OnCollisionWithEnemy()
+    {
+        CurrentUpdateDelegate -= FollowPlayer;
+        navMeshAgent?.SetDestination(transform.position);
     }
 
     private void EnemyCollisionController_OnPlayerTriggered()

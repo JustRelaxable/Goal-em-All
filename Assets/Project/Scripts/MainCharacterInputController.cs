@@ -12,6 +12,7 @@ public class MainCharacterInputController : MonoBehaviour
 
     public event Action<Vector3> OnTouchEnd;
     public event Action<Vector3> OnTouchStart;
+    public event Action OnCollisionWithEnemy;
 
     private void Awake()
     {
@@ -28,8 +29,9 @@ public class MainCharacterInputController : MonoBehaviour
         this.enabled = false;
     }
 
-    public void OnCollisionWithEnemy()
+    public void CollisionWithEnemy()
     {
+        OnCollisionWithEnemy?.Invoke();
         firstTouchPosition = Vector3.zero;
         presentTouchPosition = Vector3.zero;
         joystickVector = Vector3.zero;
@@ -59,5 +61,6 @@ public class MainCharacterInputController : MonoBehaviour
             joystickVector = Vector3.zero;
             touching = false;
         }
+
     }
 }

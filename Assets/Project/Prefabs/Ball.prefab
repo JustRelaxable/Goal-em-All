@@ -351,9 +351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kickSounds:
-  - {fileID: 8300000, guid: 1058f173086a909439ecec8ccd68a700, type: 3}
-  - {fileID: 8300000, guid: ce5af1999746b2c40a003543b2c63523, type: 3}
-  wallHit: {fileID: 8300000, guid: 5402f4cc08db17f4b81ac7e245042e5a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  wallHit: {fileID: 0}
 --- !u!1 &3722782307433841739
 GameObject:
   m_ObjectHideFlags: 0

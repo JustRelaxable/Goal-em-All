@@ -12,6 +12,7 @@ public class MainCharacterAnimatorController : MonoBehaviour
         mainCharacterInputController = GetComponent<MainCharacterInputController>();
         mainCharacterInputController.OnTouchEnd += MainCharacterInputController_OnTouchEnd;
         FindObjectOfType<FinishlineCollisionController>().OnPlayerTouchedFinishLine += MainCharacterAnimatorController_OnPlayerTouchedFinishLine;
+        mainCharacterInputController.OnCollisionWithEnemy += MainCharacterInputController_OnCollisionWithEnemy;
     }
 
     private void MainCharacterAnimatorController_OnPlayerTouchedFinishLine()
@@ -27,5 +28,10 @@ public class MainCharacterAnimatorController : MonoBehaviour
     private void Update()
     {
         animator.SetFloat("RunningBlend", mainCharacterInputController.joystickVector.magnitude*5);
+    }
+
+    private void MainCharacterInputController_OnCollisionWithEnemy()
+    {
+       animator.SetTrigger("Death");
     }
 }
