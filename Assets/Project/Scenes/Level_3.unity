@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.511
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30760258, g: 0.4902593, b: 0.5678114, a: 0.511}
+  m_IndirectSpecularColor: {r: 0.30550516, g: 0.4888516, b: 0.5686808, a: 0.511}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -816,6 +816,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 653908603, guid: b0f8bd5701d41024b8e6ba48ef87d379, type: 3}
+      propertyPath: m_Color.a
+      value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880873989, guid: b0f8bd5701d41024b8e6ba48ef87d379, type: 3}
+      propertyPath: m_Color.a
+      value: 0.59607846
+      objectReference: {fileID: 0}
     - target: {fileID: 1277700804040575240, guid: b0f8bd5701d41024b8e6ba48ef87d379, type: 3}
       propertyPath: m_Name
       value: UI
@@ -872,8 +880,28 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResetLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 1398156455653930767, guid: b0f8bd5701d41024b8e6ba48ef87d379, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411847860760418520, guid: b0f8bd5701d41024b8e6ba48ef87d379, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1725074810271214872, guid: b0f8bd5701d41024b8e6ba48ef87d379, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204115195106646494, guid: b0f8bd5701d41024b8e6ba48ef87d379, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773365619626655306, guid: b0f8bd5701d41024b8e6ba48ef87d379, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638251202884329256, guid: b0f8bd5701d41024b8e6ba48ef87d379, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1326,5 +1354,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c46ad212af995f44496bb9aeb32ae807, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3403131495173742550, guid: 162e7176fc76ed84e8eaa16bbdb071b2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 162e7176fc76ed84e8eaa16bbdb071b2, type: 3}
