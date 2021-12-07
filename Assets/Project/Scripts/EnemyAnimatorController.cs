@@ -8,12 +8,20 @@ public class EnemyAnimatorController : MonoBehaviour
     private Animator animator;
     public AudioSource enemy_hit;
 
+    private MainCharacterInputController mainCharacterInputController;
     private void Awake()
     {
         animator = GetComponent<Animator>();
         enemyCollisionController = GetComponent<EnemyCollisionController>();
         enemyCollisionController.OnPlayerTriggered += EnemyCollisionController_OnPlayerTriggered;
-        FindObjectOfType<MainCharacterInputController>().OnCollisionWithEnemy += EnemyAnimatorController_OnCollisionWithEnemy;
+        enemyCollisionController.OnEnemyDead += EnemyCollisionController_OnEnemyDead;
+        mainCharacterInputController = FindObjectOfType<MainCharacterInputController>();
+        mainCharacterInputController.OnCollisionWithEnemy += EnemyAnimatorController_OnCollisionWithEnemy;
+    }
+
+    private void EnemyCollisionController_OnEnemyDead()
+    {
+        mainCharacterInputController.OnCollisionWithEnemy -= EnemyAnimatorController_OnCollisionWithEnemy;
     }
 
     private void EnemyAnimatorController_OnCollisionWithEnemy()
